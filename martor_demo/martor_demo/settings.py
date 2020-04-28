@@ -81,12 +81,16 @@ WSGI_APPLICATION = 'martor_demo.wsgi.application'
 
 
 # Database
-# https://docs.djangoproject.com/en/3.0/ref/settings/#databases
+# https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'HOST': 'localhost',
+        'PORT': '5432',
+        'USER': 'postgres',
+        'NAME': 'django_markdown',
+        'ATOMIC_REQUESTS': True,
     }
 }
 
@@ -129,5 +133,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
-STATIC_ROOT = os.path.join(tempfile.gettempdir(), 'martor_static')
-MEDIA_ROOT = os.path.join(tempfile.gettempdir(), 'martor_media')
+# STATIC_ROOT = os.path.join(tempfile.gettempdir(), 'martor_static')
+# MEDIA_ROOT = os.path.join(tempfile.gettempdir(), 'martor_media')
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")

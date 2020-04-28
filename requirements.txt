@@ -1,3 +1,6 @@
 Django
 Markdown
 requests
+martor
+gunicorn
+psycopg2
