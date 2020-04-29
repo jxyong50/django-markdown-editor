@@ -86,7 +86,7 @@ WSGI_APPLICATION = 'martor_demo.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'HOST': 'localhost',
+        'HOST': 'postgres',
         'PORT': '5432',
         'USER': 'postgres',
         'NAME': 'django_markdown',
