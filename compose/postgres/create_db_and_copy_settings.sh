@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-POSTGRES="psql --username postgres"
+POSTGRES="psql --username django_markdown"
 
 # for COMMODITY_DB in $POSTGRES_COMMODITIES_DB
 # do
@@ -15,4 +15,4 @@ POSTGRES="psql --username postgres"
 
 # Create database for equities
 echo "Creating database: django_markdown"
-$POSTGRES -c "CREATE DATABASE django_markdown OWNER postgres;"
+$POSTGRES -c "CREATE DATABASE IF NOT EXISTS django_markdown OWNER django_markdown;"
