@@ -88,7 +88,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'HOST': 'postgres',  # host has to be postgres on production
         'PORT': '5432',
-        'USER': 'jax',
+        'USER': 'postgres',
         'NAME': 'django_markdown',
         'ATOMIC_REQUESTS': True,
     }
